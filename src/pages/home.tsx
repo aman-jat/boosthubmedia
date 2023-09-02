@@ -1,9 +1,10 @@
-import { Stack, Typography } from '@mui/material';
+import FirstPageSection from '../sections/first-page';
+import { Stack } from '@mui/material';
 
 const Home = () => {
   return (
     <Stack>
-      <Typography>Hello</Typography>
+      <FirstPageSection />
     </Stack>
   );
 };

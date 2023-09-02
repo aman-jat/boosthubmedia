@@ -1,3 +1,4 @@
+import { grey } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 // import { createBreakpoints } from '@mui/system'
 
@@ -13,34 +14,34 @@ const colorTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#254D99',
-      light: '#DAE5F9',
-      dark: '#1E3E7B',
+      main: '#0099ff',
+      light: '#66c2ff',
+      dark: '#007acc',
+    },
+    secondary: {
+      main: '#fff',
+      light: '#fff',
+      dark: '#fff',
     },
     common: {
       black: '#111927',
       white: '#ffffff',
     },
-    secondary: {
-      main: '#6C737F',
-      light: '#F3F4F6',
-      dark: '#1C2536',
-    },
     text: {
-      primary: '#1C2536',
-      secondary: '#6C737F',
+      primary: '#ffffff',
+      secondary: '#0099ff',
       disabled: '#9FA4AC',
     },
     background: {
-      default: '#00000030',
-      paper: '#F6F8FB',
+      // default: '#00000030',
+      // paper: '#F6F8FB',
     },
     action: {
-      active: '#3333338A',
-      selected: '#6C737F14',
-      disabled: '#6366F142',
-      disabledBackground: '#6366F11F',
-      focus: '#6366F11F',
+      // active: '#3333338A',
+      // selected: '#6C737F14',
+      // disabled: '#6366F142',
+      // disabledBackground: '#6366F11F',
+      // focus: '#6366F11F',
     },
     divider: '#0000001F',
     info: {
@@ -69,98 +70,79 @@ const colorTheme = createTheme({
 const theme = createTheme(colorTheme, {
   typography: {
     menuTitle: {
-      color: '#37374D',
+      // color: '#37374D',
       fontSize: '1rem',
       fontWeight: 700,
     },
-    root: {
-      fontFamily: 'Roboto Mono',
-    },
+    root: {},
     h1: {
-      fontFamily: 'Lato',
       fontWeight: 700,
-      fontSize: 96,
+      fontSize: 70,
       lineHeight: '116.7%',
       textTransform: 'initial',
       letterSpacing: '-1.5px',
     },
     h2: {
-      fontFamily: 'Lato',
       fontWeight: 300,
       fontSize: 60,
       letterSpacing: '2px',
     },
     h3: {
-      fontFamily: 'Lato',
       fontWeight: 300,
       fontSize: 28,
       textTransform: 'uppercase',
       letterSpacing: '1px',
     },
     h4: {
-      fontFamily: 'Lato',
       fontWeight: 400,
       fontSize: 20,
       textTransform: 'uppercase',
       letterSpacing: '1px',
     },
     h5: {
-      fontFamily: 'Lato',
       fontWeight: 400,
       fontSize: 16,
       textTransform: 'uppercase',
       letterSpacing: '1px',
     },
     h6: {
-      fontFamily: 'Lato',
       fontWeight: 400,
       fontSize: 14,
       textTransform: 'uppercase',
       letterSpacing: '1px',
     },
     subtitle1: {
-      fontFamily: 'Lato',
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: 16,
-      lineHeight: '175%',
-      letterSpacing: '0.15px',
+      color: grey[500],
     },
     subtitle2: {
-      fontFamily: 'Lato',
       fontWeight: 500,
       fontSize: 14,
       lineHeight: '157%',
       letterSpacing: '0.1px',
     },
     body1: {
-      fontFamily: 'Maven Pro',
       fontWeight: 300,
       fontSize: 15,
     },
     body2: {
-      fontFamily: 'Lato',
       fontWeight: 500,
       fontSize: 14,
       lineHeight: '143%',
       letterSpacing: '0.15px',
     },
     button: {
-      fontFamily: 'Lato',
-      fontWeight: 400,
-      fontSize: 16,
-      lineHeight: '24px',
-      letterSpacing: '0.4px',
       textTransform: 'none',
+      fontWeight: 600,
     },
     caption: {
-      fontFamily: 'Lato',
       fontWeight: 500,
       fontSize: 12,
       lineHeight: '166%',
       letterSpacing: '0.4px',
     },
     overline: {
-      fontFamily: 'Lato',
       fontWeight: 500,
       fontSize: 12,
       lineHeight: '26%',
@@ -169,41 +151,38 @@ const theme = createTheme(colorTheme, {
     },
   },
   components: {
-    MuiButton: {
-      styleOverrides: {
-        fullWidth: {
-          width: '100%',
-        },
-        root: {
-          '&, &:hover': {
-            boxShadow: 'none',
-          },
-          padding: '8px 28px',
-          width: 'max-content',
-          borderRadius: 4,
-          '&:disabled': {
-            color: 'rgba(17, 25, 39, 0.38)',
-          },
-        },
-        outlined: {
-          border: '1.5px solid',
-        },
-        outlinedError: {
-          border: '1px solid rgba(240, 68, 56, 0.5)',
-          '&:hover': {
-            textDecoration: 'none',
-          },
-        },
-        containedError: {
-          boxShadow: 'rgba(0, 0, 0, 0.08) 0px 1px 5px',
-          borderRadius: '12px',
-          '&:hover': {
-            backgroundColor: 'rgb(180, 35, 24)',
-            boxShadow: 'rgba(0, 0, 0, 0.08) 0px 1px 10px',
-          },
-        },
-      },
-    },
+    // MuiButton: {
+    //   styleOverrides: {
+    //     root: {
+    //       '&, &:hover': {
+    //         boxShadow: 'none',
+    //       },
+    //       padding: '2px 12px',
+    //       width: 'max-content',
+    //       borderRadius: 100,
+    //       '&:disabled': {
+    //         color: 'rgba(17, 25, 39, 0.38)',
+    //       },
+    //     },
+    //     outlined: {
+    //       border: '2px solid',
+    //     },
+    //     outlinedError: {
+    //       border: '1px solid rgba(240, 68, 56, 0.5)',
+    //       '&:hover': {
+    //         textDecoration: 'none',
+    //       },
+    //     },
+    //     containedError: {
+    //       boxShadow: 'rgba(0, 0, 0, 0.08) 0px 1px 5px',
+    //       borderRadius: '12px',
+    //       '&:hover': {
+    //         backgroundColor: 'rgb(180, 35, 24)',
+    //         boxShadow: 'rgba(0, 0, 0, 0.08) 0px 1px 10px',
+    //       },
+    //     },
+    //   },
+    // },
     MuiTextField: {
       defaultProps: {
         // variant: 'filled',
@@ -321,12 +300,9 @@ const theme = createTheme(colorTheme, {
       },
     },
     MuiLink: {
-      defaultProps: {
-        underline: 'hover',
-      },
+      defaultProps: {},
       styleOverrides: {
         root: {
-          color: colorTheme.palette.primary.main,
           fontWeight: '600',
         },
       },
@@ -372,8 +348,6 @@ const theme = createTheme(colorTheme, {
       styleOverrides: {
         root: {
           span: {
-            fontFamily:
-              'Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
             fontSize: '14px',
             fontWeight: 600,
             lineHeight: '24px',
