@@ -78,14 +78,10 @@ const theme = createTheme(colorTheme, {
     h1: {
       fontWeight: 700,
       fontSize: 70,
-      lineHeight: '116.7%',
-      textTransform: 'initial',
-      letterSpacing: '-1.5px',
     },
     h2: {
-      fontWeight: 300,
-      fontSize: 60,
-      letterSpacing: '2px',
+      fontWeight: 700,
+      fontSize: 58,
     },
     h3: {
       fontWeight: 300,
