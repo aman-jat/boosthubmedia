@@ -1,7 +1,6 @@
 import theme from '../style/theme';
 import { Button, Link, Stack, Typography, styled } from '@mui/material';
 import '../css/universal.css';
-import { green, grey } from '@mui/material/colors';
 import { MenuRounded } from '@mui/icons-material';
 
 const FirstPageSection = () => {
