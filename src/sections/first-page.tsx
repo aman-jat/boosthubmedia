@@ -1,9 +1,22 @@
 import theme from '../style/theme';
-import { Button, Link, Stack, Typography, styled } from '@mui/material';
+import {
+  Button,
+  Divider,
+  Drawer,
+  IconButton,
+  Link,
+  Stack,
+  Typography,
+  styled,
+} from '@mui/material';
 import '../css/universal.css';
 import { MenuRounded } from '@mui/icons-material';
+import { useState } from 'react';
+import video_url from '../assets/bg_video.mp4';
 
 const FirstPageSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const StyledCustomButton = styled(Button)`
     position: relative;
     overflow: hidden;
@@ -78,8 +91,22 @@ const FirstPageSection = () => {
       </Stack>
     );
   }
-  const videoUrl =
-    'https://uploads-ssl.webflow.com/64741558faab9fcd0e562523/64801f78d0c2c3e246611deb_final final header-transcode.mp4';
+
+  const navItems = [
+    { title: 'Home' },
+    { title: 'Service' },
+    { title: 'Work' },
+    { title: 'Result' },
+  ];
+
+  const overlayStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    background: 'rgba(0, 0, 0, 0.6)', // Adjust the opacity (0.5 in this case) to control darkness
+  };
 
   return (
     <Stack sx={{ backgroundColor: theme.palette.grey[900] }}>
@@ -96,8 +123,10 @@ const FirstPageSection = () => {
           loop
           muted
           id='video'>
-          <source src={videoUrl}></source>
+          <source src={video_url}></source>
         </video>
+        <div style={overlayStyle as any}></div>
+
         <Stack
           p={2}
           direction='column'
@@ -120,18 +149,17 @@ const FirstPageSection = () => {
             </Stack>
 
             <Stack display={{ xs: 'none', sm: 'flex' }} direction='row' gap={2}>
-              <Link underline='none' className='link' color='secondary'>
-                Home
-              </Link>
-              <Link underline='none' className='link' color='secondary'>
-                Service
-              </Link>
-              <Link underline='none' className='link' color='secondary'>
-                Work
-              </Link>
-              <Link underline='none' className='link' color='secondary'>
-                Result
-              </Link>
+              {navItems.map((item, i) => {
+                return (
+                  <Link
+                    key={item.title + i}
+                    underline='none'
+                    className='link'
+                    color='secondary'>
+                    {item.title}
+                  </Link>
+                );
+              })}
             </Stack>
             <Stack
               style={{ zIndex: 0 }}
@@ -142,10 +170,49 @@ const FirstPageSection = () => {
                 <span>Contact</span>
               </CustomButton>
               <Stack display={{ sm: 'none' }}>
-                <MenuRounded />
+                <IconButton onClick={() => setIsOpen(prev => !prev)}>
+                  <MenuRounded sx={{ color: theme.palette.common.white }} />
+                </IconButton>
               </Stack>
             </Stack>
           </Stack>
+
+          {/* sidenav */}
+          <Drawer
+            anchor='right'
+            open={isOpen}
+            onClose={() => setIsOpen(prev => !prev)}
+            PaperProps={{
+              sx: {
+                backgroundColor: '#006bb340',
+                backdropFilter: 'blur(10.5px)',
+                width: 200,
+                height: '100%',
+              },
+            }}>
+            {navItems.map(item => (
+              <>
+                <Stack
+                  direction='column'
+                  justifyContent='center'
+                  alignItems='center'>
+                  <Button
+                    key={item.title}
+                    // underline='none'
+                    sx={{
+                      py: 2,
+                      height: '100%',
+                      width: '100%',
+                      color: theme.palette.common.white,
+                      cursor: 'pointer',
+                    }}>
+                    <Typography variant='h6'>{item.title}</Typography>
+                  </Button>
+                </Stack>
+                <Divider />
+              </>
+            ))}
+          </Drawer>
 
           <Stack
             style={{ zIndex: 0 }}
@@ -154,7 +221,7 @@ const FirstPageSection = () => {
             alignItems='center'
             justifyContent='center'>
             <Typography variant='h2' textAlign='center'>
-              Skyrocket Solar Sales: Reach New Heights of Success
+              Boost Your Solar Success to New Heights!
             </Typography>
             <Typography variant='subtitle1' textAlign='center'>
               "We book qualified appointments on autopilot using A.I."
