@@ -7,6 +7,7 @@ const FirstPageSection = () => {
   const StyledCustomButton = styled(Button)`
     position: relative;
     overflow: hidden;
+
     span {
       position: relative;
       z-index: 2; /* Set a higher z-index for the text to keep it above the sliding background */
