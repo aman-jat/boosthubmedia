@@ -84,9 +84,8 @@ const theme = createTheme(colorTheme, {
       fontSize: 58,
     },
     h3: {
-      fontWeight: 300,
-      fontSize: 28,
-      textTransform: 'uppercase',
+      fontWeight: 600,
+      fontSize: 24,
       letterSpacing: '1px',
     },
     h4: {

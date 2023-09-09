@@ -39,3 +39,15 @@
   left: -100%;
   right: -100%;
 }
+.number-counter {
+  font-size: 48px;
+  color: #333;
+  margin: 20px;
+  text-align: center;
+}
+
+.count {
+  font-size: 48px;
+  color: #333;
+  transition: 0.5s; /* Adjust the transition duration as needed */
+}
