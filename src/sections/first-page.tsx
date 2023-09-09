@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import '../css/universal.css';
 import { MenuRounded } from '@mui/icons-material';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import video_url from '../assets/bg_video.mp4';
 import { ContainedButton, OutlinedButton } from '../components/button';
 
@@ -120,7 +120,7 @@ const FirstPageSection = () => {
               },
             }}>
             {navItems.map(item => (
-              <>
+              <Fragment key={item.title}>
                 <Stack
                   direction='column'
                   justifyContent='center'
@@ -139,7 +139,7 @@ const FirstPageSection = () => {
                   </Button>
                 </Stack>
                 <Divider />
-              </>
+              </Fragment>
             ))}
           </Drawer>
 
