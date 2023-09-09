@@ -1,5 +1,6 @@
 import theme from '../style/theme';
 import {
+  Box,
   Button,
   Divider,
   Drawer,
@@ -7,90 +8,15 @@ import {
   Link,
   Stack,
   Typography,
-  styled,
 } from '@mui/material';
 import '../css/universal.css';
 import { MenuRounded } from '@mui/icons-material';
 import { useState } from 'react';
 import video_url from '../assets/bg_video.mp4';
+import { ContainedButton, OutlinedButton } from '../components/button';
 
 const FirstPageSection = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const StyledCustomButton = styled(Button)`
-    position: relative;
-    overflow: hidden;
-
-    span {
-      position: relative;
-      z-index: 2; /* Set a higher z-index for the text to keep it above the sliding background */
-    }
-    border-radius: 50px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background-color: ${props =>
-        props.theme.palette.secondary.main}; // Adjust the color as needed
-      transform: translateX(0);
-      transition: transform 0.5s;
-      zindex: -1;
-    }
-
-    &:hover::before {
-      transform: translateX(100%);
-    }
-
-    &:hover {
-      color: ${props =>
-        props.theme.palette.primary.main}; // Change the color on hover
-    }
-  `;
-
-  function CustomButton({ children, ...props }: any) {
-    return (
-      <StyledCustomButton
-        sx={{ padding: { xs: '0px 12px', sm: '2px 12px' } }}
-        color='secondary'
-        variant='outlined'
-        {...props}>
-        {children}
-      </StyledCustomButton>
-    );
-  }
-
-  function ContainedButton({ children, ...props }: any) {
-    return (
-      <Stack
-        sx={{
-          border: '4px solid white',
-          borderRadius: 50,
-          padding: '5px',
-          borderColor: 'transparent',
-          transition: 'all 0.2s ease-in-out',
-          '&:hover': {
-            borderColor: theme.palette.primary.main,
-            boxShadow: `#0E709050 0.1px 0.1px 20px 0px`,
-          },
-        }}>
-        <Button
-          sx={{
-            borderRadius: '50px',
-            '&:hover': {
-              backgroundColor: theme.palette.primary.main,
-            },
-          }}
-          variant='contained'
-          {...props}>
-          {children}
-        </Button>
-      </Stack>
-    );
-  }
 
   const navItems = [
     { title: 'Home' },
@@ -99,18 +25,10 @@ const FirstPageSection = () => {
     { title: 'Result' },
   ];
 
-  const overlayStyle = {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    background: 'rgba(0, 0, 0, 0.6)', // Adjust the opacity (0.5 in this case) to control darkness
-  };
-
   return (
     <Stack sx={{ backgroundColor: theme.palette.grey[900] }}>
       <div style={{ position: 'relative' }}>
+        {/* video */}
         <video
           style={{
             position: 'absolute',
@@ -125,8 +43,19 @@ const FirstPageSection = () => {
           id='video'>
           <source src={video_url}></source>
         </video>
-        <div style={overlayStyle as any}></div>
+        {/* darken overlay */}
+        <Box
+          sx={{
+            background: 'rgba(0, 0, 0, 0.6)',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+          }}
+        />
 
+        {/* overlay content */}
         <Stack
           p={2}
           direction='column'
@@ -166,9 +95,9 @@ const FirstPageSection = () => {
               direction='row'
               gap={2}
               alignItems='center'>
-              <CustomButton size='small'>
+              <OutlinedButton size='small'>
                 <span>Contact</span>
-              </CustomButton>
+              </OutlinedButton>
               <Stack display={{ sm: 'none' }}>
                 <IconButton onClick={() => setIsOpen(prev => !prev)}>
                   <MenuRounded sx={{ color: theme.palette.common.white }} />
