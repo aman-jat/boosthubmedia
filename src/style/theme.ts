@@ -116,10 +116,12 @@ const theme = createTheme(colorTheme, {
       fontWeight: 600,
       fontSize: 58,
       [defaultTheme.breakpoints.up('galaxyFold')]: {
-        fontSize: '32px',
+        fontWeight: 500,
+        fontSize: 24,
       },
       [defaultTheme.breakpoints.up('mobile')]: {
-        fontSize: '45px',
+        fontWeight: 500,
+        fontSize: 26,
       },
       [defaultTheme.breakpoints.up('xs')]: {
         fontSize: '40px',
@@ -141,10 +143,12 @@ const theme = createTheme(colorTheme, {
     h3: {
       fontWeight: 600,
       [defaultTheme.breakpoints.up('galaxyFold')]: {
-        fontSize: '20px',
+        fontWeight: 500,
+        fontSize: 16,
       },
       [defaultTheme.breakpoints.up('mobile')]: {
-        fontSize: '28px',
+        fontWeight: 600,
+        fontSize: 20,
       },
       [defaultTheme.breakpoints.up('xs')]: {
         fontSize: '30px',
@@ -168,11 +172,11 @@ const theme = createTheme(colorTheme, {
       fontWeight: 400,
       [defaultTheme.breakpoints.up('galaxyFold')]: {
         fontWeight: 500,
-        fontSize: '12px',
+        fontSize: 8,
       },
       [defaultTheme.breakpoints.up('mobile')]: {
         fontWeight: 500,
-        fontSize: '16px',
+        fontSize: 12,
       },
       [defaultTheme.breakpoints.up('xs')]: {
         fontWeight: 500,
@@ -286,7 +290,7 @@ const theme = createTheme(colorTheme, {
       letterSpacing: 0,
       [defaultTheme.breakpoints.up('galaxyFold')]: {
         fontWeight: 500,
-        fontSize: 12,
+        fontSize: 10,
       },
       [defaultTheme.breakpoints.up('mobile')]: {
         fontWeight: 500,
