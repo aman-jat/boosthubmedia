@@ -5,7 +5,7 @@ import {
   Divider,
   Drawer,
   IconButton,
-  Link,
+  Link as MuiLink,
   Stack,
   Typography,
 } from '@mui/material';
@@ -14,6 +14,7 @@ import { MenuRounded } from '@mui/icons-material';
 import { Fragment, useState } from 'react';
 import video_url from '../assets/bg_video.mp4';
 import { ContainedButton, OutlinedButton } from '../components/button';
+import { useNavigate } from 'react-router-dom';
 
 export const navItems = [
   { title: 'Home' },
@@ -24,7 +25,7 @@ export const navItems = [
 
 const FirstPageSection = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate = useNavigate();
   return (
     <Stack sx={{ backgroundColor: theme.palette.grey[900] }}>
       <div style={{ position: 'relative' }}>
@@ -83,14 +84,14 @@ const FirstPageSection = () => {
             <Stack display={{ xs: 'none', sm: 'flex' }} direction='row' gap={2}>
               {navItems.map((item, i) => {
                 return (
-                  <Link
+                  <MuiLink
                     // sx={{ fontSize: { xl: 20 } }}
                     key={item.title + i}
                     underline='none'
                     className='link'
                     color='secondary'>
                     {item.title}
-                  </Link>
+                  </MuiLink>
                 );
               })}
             </Stack>
@@ -99,9 +100,11 @@ const FirstPageSection = () => {
               direction='row'
               gap={2}
               alignItems='center'>
-              <OutlinedButton size='small'>
-                <span>Contact</span>
-              </OutlinedButton>
+              <a href='https://calendly.com/boosthubmedia/boost-hub-media-discovery-call'>
+                <OutlinedButton size='small'>
+                  <span>Contact</span>
+                </OutlinedButton>
+              </a>
               <Stack display={{ sm: 'none' }}>
                 <IconButton onClick={() => setIsOpen(prev => !prev)}>
                   <MenuRounded sx={{ color: theme.palette.common.white }} />

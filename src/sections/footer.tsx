@@ -1,4 +1,3 @@
-import { Facebook, Instagram, LinkedIn } from '@mui/icons-material';
 import theme from '../style/theme';
 import { OutlinedButton } from '../components/button';
 import { Stack, Typography, Link } from '@mui/material';
@@ -98,9 +97,11 @@ const Footer = () => {
             consultation. Let BoostHubMedia be your trusted partner in achieving
             solar success.
           </Typography>
-          <OutlinedButton size='small'>
-            <span>Book Now</span>
-          </OutlinedButton>
+          <a href='https://calendly.com/boosthubmedia/boost-hub-media-discovery-call'>
+            <OutlinedButton size='small'>
+              <span>Book Now</span>
+            </OutlinedButton>
+          </a>
         </Stack>
       </Stack>
       <Stack mb={4} direction='row' justifyContent='space-around'>

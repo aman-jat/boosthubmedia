@@ -1,5 +1,6 @@
 import theme from '../style/theme';
 import { Button, Stack } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export const OutlinedButton = ({ children, ...props }: any) => {
   return (
@@ -58,6 +59,7 @@ export const ContainedButton = ({ children, ...props }: any) => {
         },
       }}>
       <Button
+        component={Link}
         sx={{
           borderRadius: '50px',
           py: 1,
