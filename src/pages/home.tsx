@@ -4,6 +4,7 @@ import { Stack } from '@mui/material';
 import ServiceWeOffer from '../sections/service-we-offer';
 import BoostYourSales from '../sections/boost-your-sales';
 import ComprehensiveApproach from '../sections/comprehensive-approach';
+import Footer from '../sections/footer';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <ServiceWeOffer />
       <BoostYourSales />
       <ComprehensiveApproach />
+      <Footer />
     </Stack>
   );
 };

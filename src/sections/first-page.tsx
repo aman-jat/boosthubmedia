@@ -15,15 +15,15 @@ import { Fragment, useState } from 'react';
 import video_url from '../assets/bg_video.mp4';
 import { ContainedButton, OutlinedButton } from '../components/button';
 
+export const navItems = [
+  { title: 'Home' },
+  { title: 'Service' },
+  { title: 'Work' },
+  { title: 'Result' },
+];
+
 const FirstPageSection = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const navItems = [
-    { title: 'Home' },
-    { title: 'Service' },
-    { title: 'Work' },
-    { title: 'Result' },
-  ];
 
   return (
     <Stack sx={{ backgroundColor: theme.palette.grey[900] }}>

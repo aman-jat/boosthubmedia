@@ -1,4 +1,4 @@
-import { grey } from '@mui/material/colors';
+import { blueGrey, grey } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 
 const defaultTheme = createTheme({
@@ -11,6 +11,7 @@ const defaultTheme = createTheme({
       md: 900,
       lg: 1200,
       xl: 1536,
+      xxl: 1964,
     },
   },
 });
@@ -198,17 +199,57 @@ const theme = createTheme(colorTheme, {
       fontFamily: 'Maven Pro',
     },
     h5: {
-      fontWeight: 400,
-      fontSize: 16,
-      textTransform: 'uppercase',
-      letterSpacing: '1px',
+      [defaultTheme.breakpoints.up('galaxyFold')]: {
+        fontWeight: 700,
+        fontSize: 20,
+      },
+      [defaultTheme.breakpoints.up('mobile')]: {
+        fontWeight: 700,
+        fontSize: 22,
+      },
+      [defaultTheme.breakpoints.up('xs')]: {
+        fontWeight: 500,
+        fontSize: '18px',
+      },
+      [defaultTheme.breakpoints.up('sm')]: {
+        fontSize: '22px',
+      },
+      [defaultTheme.breakpoints.up('md')]: {
+        fontSize: '24px',
+      },
+      [defaultTheme.breakpoints.up('lg')]: {
+        fontSize: '28px',
+      },
+      [defaultTheme.breakpoints.up('xl')]: {
+        fontWeight: 700,
+        fontSize: 25,
+      },
       fontFamily: 'Maven Pro',
     },
     h6: {
-      fontWeight: 400,
-      fontSize: 14,
-      textTransform: 'uppercase',
-      letterSpacing: '1px',
+      color: blueGrey[400],
+      [defaultTheme.breakpoints.up('galaxyFold')]: {
+        fontSize: 10,
+      },
+      [defaultTheme.breakpoints.up('mobile')]: {
+        fontSize: 10,
+      },
+      [defaultTheme.breakpoints.up('xs')]: {
+        fontSize: 12,
+      },
+      [defaultTheme.breakpoints.up('sm')]: {
+        fontSize: 13,
+      },
+      [defaultTheme.breakpoints.up('md')]: {
+        fontSize: 12,
+      },
+      [defaultTheme.breakpoints.up('lg')]: {
+        fontSize: 13,
+      },
+      [defaultTheme.breakpoints.up('xl')]: {
+        fontSize: 14,
+      },
+      fontFamily: 'Maven Pro',
     },
     subtitle1: {
       fontWeight: 600,
@@ -514,6 +555,7 @@ declare module '@mui/material/styles' {
     md: true;
     lg: true;
     xl: true;
+    xxl: true;
     mobile: true;
     galaxyFold: true;
   }
