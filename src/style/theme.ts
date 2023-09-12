@@ -163,9 +163,8 @@ const theme = createTheme(colorTheme, {
         fontSize: '30px',
       },
       [defaultTheme.breakpoints.up('xl')]: {
-        fontSize: '40px',
+        fontSize: '30px',
       },
-      letterSpacing: '1px',
       fontFamily: 'Maven Pro',
     },
     h4: {
@@ -268,9 +267,28 @@ const theme = createTheme(colorTheme, {
     },
     subtitle2: {
       fontWeight: 500,
-      fontSize: 14,
-      lineHeight: '157%',
-      letterSpacing: '0.1px',
+      fontSize: 8, // Default font size
+      [defaultTheme.breakpoints.up('galaxyFold')]: {
+        fontSize: 10,
+      },
+      [defaultTheme.breakpoints.up('mobile')]: {
+        fontSize: 10,
+      },
+      [defaultTheme.breakpoints.up('xs')]: {
+        fontSize: 10,
+      },
+      [defaultTheme.breakpoints.up('sm')]: {
+        fontSize: 10,
+      },
+      [defaultTheme.breakpoints.up('md')]: {
+        fontSize: 10,
+      },
+      [defaultTheme.breakpoints.up('lg')]: {
+        fontSize: 10,
+      },
+      [defaultTheme.breakpoints.up('xl')]: {
+        fontSize: 10,
+      },
     },
     body1: {
       fontWeight: 300,
@@ -310,7 +328,7 @@ const theme = createTheme(colorTheme, {
         fontSize: 18,
       },
       [defaultTheme.breakpoints.up('xl')]: {
-        fontSize: 22,
+        fontSize: 20,
       },
     },
     overline: {
