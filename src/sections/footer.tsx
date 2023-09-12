@@ -44,44 +44,6 @@ const Footer = () => {
             justifyContent='flex-start'
             gap={{ xs: 0.5 }}>
             <Typography variant='h5'>Boosthub Media</Typography>
-            <Stack gap={1} mb={2} alignItems='flex-start' direction='row'>
-              <LinkedIn
-                fontSize='large'
-                sx={{
-                  color: theme.palette.common.white,
-                  transition: 'transform 0.2s',
-                  '&:hover': {
-                    cursor: 'pointer',
-                    transform: 'scale(1.2)',
-                    transition: 'transform 0.2s',
-                  },
-                }}
-              />
-              <Instagram
-                fontSize='large'
-                sx={{
-                  color: theme.palette.common.white,
-                  transition: 'transform 0.2s',
-                  '&:hover': {
-                    cursor: 'pointer',
-                    transform: 'scale(1.2)',
-                    transition: 'transform 0.2s',
-                  },
-                }}
-              />
-              <Facebook
-                fontSize='large'
-                sx={{
-                  color: theme.palette.common.white,
-                  transition: 'transform 0.2s',
-                  '&:hover': {
-                    cursor: 'pointer',
-                    transform: 'scale(1.2)',
-                    transition: 'transform 0.2s',
-                  },
-                }}
-              />
-            </Stack>
             <Stack alignItems='flex-start' gap={0.5}>
               {navItems.map(navItem => {
                 return (
@@ -123,18 +85,21 @@ const Footer = () => {
             sx={{
               fontWeight: 600,
               fontSize: {
-                xs: 40,
-                sm: 50,
-                md: 55,
-                lg: 70,
-                xl: 75,
+                xs: 20,
+                sm: 25,
+                md: 30,
+                lg: 35,
+                xl: 40,
               },
               lineHeight: { xs: 1.1 },
             }}>
-            Solar Ads that Connect, Unleash Your Potential
+            Ready to take your solar consulting business to the next level?
+            Contact us today to discuss your needs and receive a personalized
+            consultation. Let BoostHubMedia be your trusted partner in achieving
+            solar success.
           </Typography>
           <OutlinedButton size='small'>
-            <span>Contact</span>
+            <span>Book Now</span>
           </OutlinedButton>
         </Stack>
       </Stack>

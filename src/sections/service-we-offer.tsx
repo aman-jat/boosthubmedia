@@ -46,14 +46,20 @@ const ServiceWeOffer = () => {
       </Typography>
 
       <Card
-        heading='Brand Supremacy'
-        desc={`Is your solar business poised for long-term success? In today's landscape, a well-crafted company brand is a definitive statement of legitimacy and unwavering pride in our endeavours. When individuals resonate with a company's values, they are more inclined to invest in installations, recognizing the unique value proposition that sets us apart. Establishing a strong connection based on shared ideals is paramount in influencing customers to willingly choose our services over any other, enhancing their willingness to invest at a higher level.`}
+        heading='Premier Homeowner Leads'
+        desc={`At BoostHubMedia, we understand that the lifeblood of your thriving solar consultancy is a consistent stream of top-tier leads. Our team excels in the art of digital marketing, generating homeowner leads of the highest caliber. These leads aren't just inquiries; they're pre-vetted prospects, primed for your expert consultation.`}
         svg={brandSupremacyImage}
         direction={{ xs: 'column-reverse', sm: 'row' }}
       />
       <Card
-        heading='Revitalized Premium Lead Generation'
-        desc={`At our core, we are not merely lead sellers or resellers. Our focus lies in constructing a bespoke lead generation funnel tailored exclusively for you. This dynamic system consistently generates an abundance of high-quality leads day in and day out. However, our commitment extends beyond lead generation. Our expertise lies in empowering you to effectively convert these leads into successful closed deals. We prioritize your success and provide the necessary guidance to capitalize on the full potential of your leads, ensuring optimal results and sustained growth.`}
+        heading='Custom CRM Excellence'
+        desc={`Crafting an unparalleled client experience starts with an exceptional Customer Relationship Management (CRM) system. Our experts orchestrate the setup, customization, and seamless management of your CRM, ensuring no lead escapes your nurturing touch. Track interactions, automate processes, and schedule appointments with unmatched precision.`}
+        svg={revitalized}
+        direction={{ xs: 'column-reverse', sm: 'row-reverse' }}
+      />
+      <Card
+        heading='Facebook Advertising Mastery'
+        desc={`Unleash the full potential of social media with our meticulously crafted Facebook advertising campaigns. We create and manage targeted advertisements that resonate with your ideal audience, effectively directing prospective clients to your virtual doorstep. Our data-driven strategy optimizes your advertising budget, delivering an exceptional return on investment.`}
         svg={revitalized}
         direction={{ xs: 'column-reverse', sm: 'row-reverse' }}
       />

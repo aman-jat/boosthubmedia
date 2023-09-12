@@ -383,10 +383,17 @@ const theme = createTheme(colorTheme, {
   components: {
     MuiTextField: {
       defaultProps: {
+        // variant: 'filled',
         InputLabelProps: { shrink: true },
       },
+      styleOverrides: {
+        root: {
+          '&.Mui-disabled': {
+            backgroundColor: '#9FA4AC42', // Change this to your desired background color
+          },
+        },
+      },
     },
-
     MuiFormControlLabel: {
       styleOverrides: {
         root: {

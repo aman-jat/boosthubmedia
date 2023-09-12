@@ -4,17 +4,17 @@ import '../css/universal.css';
 
 const data = [
   {
-    value: 25,
+    value: 22,
     postfix: '+',
     label: 'Clients',
   },
   {
-    value: 15,
+    value: 13,
     postfix: 'k+',
     label: 'Leads Generated',
   },
   {
-    value: 1000,
+    value: 1200,
     postfix: '+',
     label: 'Appointment Set',
   },
