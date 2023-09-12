@@ -24,7 +24,7 @@ const BoostYourSales = () => {
       {/* darken overlay */}
       <Box
         sx={{
-          background: 'rgba(0, 0, 0, 0.6)',
+          background: 'rgba(0, 0, 0, 0.8)',
           position: 'absolute',
           top: 0,
           left: 0,
