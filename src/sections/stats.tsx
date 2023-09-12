@@ -46,12 +46,7 @@ const Stats = () => {
       return () => clearInterval(interval);
     }, []);
 
-    return (
-      <>
-        <span style={{ visibility: 'hidden' }}>0</span>
-        <span style={{ marginLeft: '-40px' }} ref={countEl} />
-      </>
-    );
+    return <Typography variant='h2' color='#FF9000' ref={countEl} />;
   };
 
   return (
@@ -62,11 +57,15 @@ const Stats = () => {
       {data.map((d, i) => {
         return (
           <Stack py={4} alignItems='center' flex={1} key={d.label}>
-            <Typography variant='h1' color='#FF9000'>
+            <Stack direction='row' alignItems='center' justifyContent='center'>
               <AnimationNumber number={data[i].value} />
-              {d.postfix}
-            </Typography>
-            <Typography variant='h3' color='primary'>
+              <Typography variant='h2' color='#FF9000'>
+                {d.postfix}
+              </Typography>
+            </Stack>
+            {/* <span style={{ visibility: 'hidden' }}>0</span> */}
+
+            <Typography textAlign='center' variant='h4' color='primary'>
               {d.label.toUpperCase()}
             </Typography>
           </Stack>

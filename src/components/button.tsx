@@ -1,49 +1,45 @@
 import theme from '../style/theme';
-import { Button, Stack, styled } from '@mui/material';
-
-const StyledCustomButton = styled(Button)`
-  position: relative;
-  overflow: hidden;
-
-  span {
-    position: relative;
-    z-index: 2; /* Set a higher z-index for the text to keep it above the sliding background */
-  }
-  border-radius: 50px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: ${props =>
-      props.theme.palette.secondary.main}; // Adjust the color as needed
-    transform: translateX(0);
-    transition: transform 0.5s;
-    zindex: -1;
-  }
-
-  &:hover::before {
-    transform: translateX(100%);
-  }
-
-  &:hover {
-    color: ${props =>
-      props.theme.palette.primary.main}; // Change the color on hover
-  }
-`;
+import { Button, Stack } from '@mui/material';
 
 export const OutlinedButton = ({ children, ...props }: any) => {
   return (
-    <StyledCustomButton
-      sx={{ padding: { xs: '0px 12px', sm: '2px 12px' } }}
+    <Button
+      sx={{
+        position: 'relative',
+        borderRadius: 50,
+        borderWidth: 2.5,
+        borderColor: theme.palette.common.white,
+        overflow: 'hidden',
+        px: { xs: 2, md: 4 },
+        span: {
+          position: 'relative',
+          zIndex: 1,
+        },
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          top: 0,
+          left: ' -100%',
+          width: '100%',
+          height: '100%',
+          backgroundColor: theme.palette.secondary.main, // Adjust the color as needed
+          transform: 'translateX(0)',
+          transition: 'transform 0.5s',
+          zindex: -1,
+        },
+        ' &:hover': {
+          borderWidth: 2.5,
+          color: theme.palette.primary.main,
+        },
+        '&:hover::before': {
+          transform: 'translateX(100%)',
+        },
+      }}
       color='secondary'
       variant='outlined'
       {...props}>
       {children}
-    </StyledCustomButton>
+    </Button>
   );
 };
 
@@ -57,15 +53,18 @@ export const ContainedButton = ({ children, ...props }: any) => {
         borderColor: 'transparent',
         transition: 'all 0.2s ease-in-out',
         '&:hover': {
-          borderColor: theme.palette.primary.main,
-          boxShadow: `#0E709050 0.1px 0.1px 20px 0px`,
+          borderColor: theme.palette.primary.light,
+          boxShadow: `#0E709050 0.1px 2px 20px 10px`,
         },
       }}>
       <Button
         sx={{
           borderRadius: '50px',
+          py: 1,
+          px: { xs: 2, md: 4 },
+          backgroundColor: theme.palette.primary.light,
           '&:hover': {
-            backgroundColor: theme.palette.primary.main,
+            backgroundColor: theme.palette.primary.light,
           },
         }}
         variant='contained'

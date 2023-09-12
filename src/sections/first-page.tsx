@@ -68,19 +68,23 @@ const FirstPageSection = () => {
             justifyContent='space-between'
             alignItems='center'>
             <Stack>
-              <Link
-                underline='none'
+              <Typography
                 color='secondary'
-                className='link'
-                sx={{ fontFamily: 'Romanesco', fontSize: 28 }}>
+                sx={{
+                  fontWeight: 700,
+                  fontFamily: 'Romanesco',
+                  zIndex: 1,
+                  fontSize: { xs: 28, sm: 30, md: 40 },
+                }}>
                 {'BoostHub'.toUpperCase()}
-              </Link>
+              </Typography>
             </Stack>
 
             <Stack display={{ xs: 'none', sm: 'flex' }} direction='row' gap={2}>
               {navItems.map((item, i) => {
                 return (
                   <Link
+                    // sx={{ fontSize: { xl: 20 } }}
                     key={item.title + i}
                     underline='none'
                     className='link'
@@ -149,7 +153,7 @@ const FirstPageSection = () => {
             flex={1}
             alignItems='center'
             justifyContent='center'>
-            <Typography variant='h2' textAlign='center'>
+            <Typography variant='h1' textAlign='center'>
               Boost Your Solar Success to New Heights!
             </Typography>
             <Typography variant='subtitle1' textAlign='center'>
