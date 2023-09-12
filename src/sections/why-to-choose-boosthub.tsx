@@ -71,7 +71,7 @@ const ComprehensiveApproach = () => {
           gap={{ xs: 2, sm: 0 }}
           container
           spacing={{ sm: 2, lg: 4 }}>
-          {data.map((item, i) => {
+          {data.map(item => {
             return (
               <Grid key={item.id} item xs={12} sm={6} md={4}>
                 <Stack

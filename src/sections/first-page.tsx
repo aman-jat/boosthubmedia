@@ -14,7 +14,6 @@ import { MenuRounded } from '@mui/icons-material';
 import { Fragment, useState } from 'react';
 import video_url from '../assets/bg_video.mp4';
 import { ContainedButton, OutlinedButton } from '../components/button';
-import { useNavigate } from 'react-router-dom';
 
 export const navItems = [
   { title: 'Home' },
@@ -25,7 +24,6 @@ export const navItems = [
 
 const FirstPageSection = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
   return (
     <Stack sx={{ backgroundColor: theme.palette.grey[900] }}>
       <div style={{ position: 'relative' }}>
