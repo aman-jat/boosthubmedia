@@ -48,7 +48,7 @@ const ComprehensiveApproach = () => {
   ];
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div id='work' style={{ position: 'relative' }}>
       <Stack
         gap={{ xs: 2, sm: 2, lg: 6 }}
         sx={{

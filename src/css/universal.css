@@ -23,3 +23,6 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+.scroll-transition {
+  transition: scroll-behavior 1s ease-in-out; /* You can adjust the duration (1s) and timing function (ease-in-out) to control the scroll speed and easing effect. */
+}

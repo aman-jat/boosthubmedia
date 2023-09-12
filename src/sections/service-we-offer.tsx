@@ -40,7 +40,7 @@ const ServiceWeOffer = () => {
   };
 
   return (
-    <Stack gap={3} px={'10%'} py={'10%'}>
+    <Stack id='services' gap={3} px={'10%'} py={'10%'}>
       <Typography variant='h2' color='primary'>
         Services We Offer
       </Typography>

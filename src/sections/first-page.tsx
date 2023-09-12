@@ -16,16 +16,23 @@ import video_url from '../assets/bg_video.mp4';
 import { ContainedButton, OutlinedButton } from '../components/button';
 
 export const navItems = [
-  { title: 'Home' },
-  { title: 'Service' },
-  { title: 'Work' },
-  { title: 'Result' },
+  { title: 'Home', to: 'home' },
+  { title: 'Services', to: 'services' },
+  { title: 'Work', to: 'work' },
+  { title: 'Result', to: 'results' },
 ];
+
+const scrollToSection = (sectionId: any) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
 
 const FirstPageSection = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <Stack sx={{ backgroundColor: theme.palette.grey[900] }}>
+    <Stack id='home' sx={{ backgroundColor: theme.palette.grey[900] }}>
       <div style={{ position: 'relative' }}>
         {/* video */}
         <video
@@ -83,6 +90,7 @@ const FirstPageSection = () => {
               {navItems.map((item, i) => {
                 return (
                   <MuiLink
+                    onClick={() => scrollToSection(`${item.to}`)}
                     // sx={{ fontSize: { xl: 20 } }}
                     key={item.title + i}
                     underline='none'
