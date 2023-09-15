@@ -106,7 +106,7 @@ const Footer = () => {
       </Stack>
       <Stack mb={4} direction='row' justifyContent='space-around'>
         <Typography variant='h6'>
-          Copyright 2023 Solar Bulls, Inc. All rights reserved.
+          Copyright 2023 BoostHub Media, Inc. All rights reserved.
         </Typography>
         <Typography variant='h6'>Privacy Policy | Terms of Use</Typography>
       </Stack>
